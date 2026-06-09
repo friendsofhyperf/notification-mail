@@ -1,18 +1,14 @@
 # Notification Mail Channel
 
-[中文说明](README_CN.md)
+[English](README.md)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/friendsofhyperf/notification-mail.svg?style=flat-square)](https://packagist.org/packages/friendsofhyperf/notification-mail)
-[![Total Downloads](https://img.shields.io/packagist/dt/friendsofhyperf/notification-mail.svg?style=flat-square)](https://packagist.org/packages/friendsofhyperf/notification-mail)
-[![GitHub license](https://img.shields.io/github/license/friendsofhyperf/notification-mail)](https://github.com/friendsofhyperf/notification-mail)
-
-## Installation
+## 安装
 
 ```shell
 composer require friendsofhyperf/notification-mail
 ```
 
-## Usage
+## 使用
 
 ### Use `Notifiable` trait in Model
 
@@ -27,9 +23,9 @@ use FriendsOfHyperf\Notification\Traits\Notifiable;
 use Hyperf\DbConnection\Model\Model;
 
 /**
- * @property int $id 
- * @property \Carbon\Carbon $created_at 
- * @property \Carbon\Carbon $updated_at 
+ * @property int $id
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
  */
 class User extends Model
 {
@@ -39,8 +35,8 @@ class User extends Model
      * The table associated with the model.
      */
     protected ?string $table = 'user';
-    
-    
+
+
 
     // 通知邮箱
     public function routeNotificationForMail(): string
@@ -108,6 +104,7 @@ class Test extends Notification
 }
 ```
 
+### Mail Template
 
 ```php
 // storage/view/email.blade.php
